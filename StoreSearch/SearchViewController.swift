@@ -30,6 +30,8 @@ class SearchViewController: UIViewController {
     tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
     cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
+    
+    searchBar.becomeFirstResponder()
   }
 
   override func didReceiveMemoryWarning() {

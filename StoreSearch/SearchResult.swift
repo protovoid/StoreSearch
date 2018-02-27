@@ -86,5 +86,8 @@ class SearchResult: Codable, CustomStringConvertible {
 }
 
 func < (lhs: SearchResult, rhs: SearchResult) -> Bool {
-  return lhs.name.localizedStandardCompare(rhs.name) == .orderedAscending
+  // sort by track name
+  // return lhs.name.localizedStandardCompare(rhs.name) == .orderedAscending
+  // sort by artistname
+  return lhs.artistName.localizedStandardCompare(rhs.artistName) == .orderedAscending
 }

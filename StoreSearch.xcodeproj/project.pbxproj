@@ -65,16 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				63E260E1203E3AA300BA8053 /* AppDelegate.swift */,
-				63E260E3203E3AA300BA8053 /* SearchViewController.swift */,
-				63235C792048AE6700973219 /* LoadingCell.xib */,
-				63235C372040E1AF00973219 /* NothingFoundCell.xib */,
-				63235C352040D89A00973219 /* SearchResultCell.swift */,
-				63E260F3203E490400BA8053 /* SearchResult.swift */,
-				63E260E5203E3AA300BA8053 /* Main.storyboard */,
 				63E260E8203E3AA300BA8053 /* Assets.xcassets */,
-				63235C332040D0D000973219 /* SearchResultCell.xib */,
-				63E260EA203E3AA300BA8053 /* LaunchScreen.storyboard */,
 				63E260ED203E3AA300BA8053 /* Info.plist */,
+				63E260EA203E3AA300BA8053 /* LaunchScreen.storyboard */,
+				63235C792048AE6700973219 /* LoadingCell.xib */,
+				63E260E5203E3AA300BA8053 /* Main.storyboard */,
+				63235C372040E1AF00973219 /* NothingFoundCell.xib */,
+				63E260F3203E490400BA8053 /* SearchResult.swift */,
+				63235C352040D89A00973219 /* SearchResultCell.swift */,
+				63235C332040D0D000973219 /* SearchResultCell.xib */,
+				63E260E3203E3AA300BA8053 /* SearchViewController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";

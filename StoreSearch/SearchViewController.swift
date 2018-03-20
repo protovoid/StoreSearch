@@ -50,6 +50,7 @@ class SearchViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  
   // MARK:- Private Methods
   func iTunesURL(searchText: String, category: Int) -> URL {
     let kind: String
@@ -84,6 +85,17 @@ class SearchViewController: UIViewController {
     let action = UIAlertAction(title: "OK", style: .default, handler: nil)
     alert.addAction(action)
     present(alert, animated: true, completion: nil)
+  }
+  
+  
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowDetail" {
+      let detailViewController = segue.destination as! DetailViewController
+      let indexPath = sender as! IndexPath
+      let searchResult = searchResults[indexPath.row]
+      detailViewController.searchResult = searchResult
+    }
   }
 
 
@@ -174,6 +186,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    performSegue(withIdentifier: "ShowDetail", sender: indexPath)
   }
   
   func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

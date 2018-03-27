@@ -19,6 +19,7 @@
 		634FBDC72061EC0F0095030E /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634FBDC62061EC0F0095030E /* SlideOutAnimationController.swift */; };
 		634FBDC920659C890095030E /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634FBDC820659C890095030E /* LandscapeViewController.swift */; };
 		634FBDCB2065B2F20095030E /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634FBDCA2065B2F20095030E /* FadeOutAnimationController.swift */; };
+		634FBDCD206AFCA60095030E /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634FBDCC206AFCA60095030E /* Search.swift */; };
 		63E260E2203E3AA300BA8053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E260E1203E3AA300BA8053 /* AppDelegate.swift */; };
 		63E260E4203E3AA300BA8053 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E260E3203E3AA300BA8053 /* SearchViewController.swift */; };
 		63E260E7203E3AA300BA8053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E260E5203E3AA300BA8053 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		634FBDC62061EC0F0095030E /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		634FBDC820659C890095030E /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
 		634FBDCA2065B2F20095030E /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
+		634FBDCC206AFCA60095030E /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		63E260DE203E3AA300BA8053 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E260E1203E3AA300BA8053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63E260E3203E3AA300BA8053 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		63E260E0203E3AA300BA8053 /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				634FBDCC206AFCA60095030E /* Search.swift */,
 				63E260E1203E3AA300BA8053 /* AppDelegate.swift */,
 				63E260E8203E3AA300BA8053 /* Assets.xcassets */,
 				63E260ED203E3AA300BA8053 /* Info.plist */,
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634FBDCD206AFCA60095030E /* Search.swift in Sources */,
 				63E260E4203E3AA300BA8053 /* SearchViewController.swift in Sources */,
 				634FBDC120607B080095030E /* DimmingPresentationController.swift in Sources */,
 				634FBDCB2065B2F20095030E /* FadeOutAnimationController.swift in Sources */,

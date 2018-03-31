@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    splitVC.delegate = self
     customizeAppearance()
     detailVC.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
     searchVC.splitViewDetail = detailVC
@@ -68,5 +69,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
 
+}
+
+
+extension AppDelegate: UISplitViewControllerDelegate {
+  func splitViewController(_ svc: UISplitViewController, willChangeTo displayMode: UISplitViewControllerDisplayMode) {
+    print(#function)
+    // dismiss presented vc if master pane visible
+    if displayMode == .primaryOverlay {
+      svc.dismiss(animated: true, completion: nil)
+    }
+  }
 }
 

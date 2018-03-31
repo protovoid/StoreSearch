@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
   
@@ -128,11 +129,21 @@ class DetailViewController: UIViewController {
     }
     popupView.isHidden = false
   }
+  
+  
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowMenu" {
+      let controller = segue.destination as! MenuTableViewController
+      controller.delegate = self
+    }
+  }
     
 
 
 
 }
+
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
   func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -152,8 +163,33 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
   
 }
 
+
 extension DetailViewController: UIGestureRecognizerDelegate {
   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
     return (touch.view === self.view)
   }
 }
+
+
+extension DetailViewController: MenuViewControllerDelegate {
+  func menuViewControllerSendEmail(_ controller: MenuTableViewController) {
+    dismiss(animated: true, completion: {
+      if MFMailComposeViewController.canSendMail() {
+        let controller = MFMailComposeViewController()
+        controller.mailComposeDelegate = self
+        controller.modalPresentationStyle = .formSheet
+        controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
+        controller.setToRecipients(["support@voidarray.com"])
+        self.present(controller, animated: true, completion: nil)
+      }
+    })
+  }
+}
+
+
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    dismiss(animated: true, completion: nil)
+  }
+}
+
